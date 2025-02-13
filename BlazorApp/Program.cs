@@ -1,11 +1,7 @@
-using ConnectFour;
-using ConnectFour.Components;
-using System;
-using System.Numerics;
+using BlazorApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<GameState>();
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -30,4 +26,3 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
-
